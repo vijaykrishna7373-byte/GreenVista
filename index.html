@@ -419,20 +419,7 @@
   }
   textarea{min-height:92px;resize:vertical;}
   .file-field{
-    padding:18px;border-radius:18px;background:#fff;border:1px dashed rgba(33,29,24,.12);color:#756e61;font-size:13px;
-  }
-  .file-field input[type="file"]{
-    width:100%;
-    border:none;
-    padding:0;
-    background:transparent;
-    color:var(--char);
-  }
-  .file-field .hint{
-    display:block;
-    margin-top:8px;
-    font-size:12px;
-    color:#8a8174;
+    padding:18px;border-radius:18px;background:#fff;border:1px dashed rgba(33,29,24,.12);color:#756e61;text-align:center;font-size:13px;
   }
   .submit-row{grid-column:1/-1;margin-top:6px;}
   .submit-row .btn{width:100%;border:none;}
@@ -459,44 +446,6 @@
   .contact-phone{
     display:inline-flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:800;letter-spacing:.06em;
     color:var(--forest);
-  }
-  .consultation-form{
-    position:relative;
-    background:linear-gradient(180deg, #fff 0%, #faf6ee 100%);
-    border:1px solid rgba(33,29,24,.08);
-    border-radius:30px;
-    padding:28px;
-    box-shadow:0 18px 40px rgba(17,23,18,.07);
-  }
-  .consultation-form .field select,
-  .consultation-form .field input,
-  .consultation-form .field textarea{
-    border-color:rgba(33,29,24,.14);
-    background:#fff;
-  }
-  .consultation-form .field textarea{min-height:140px;resize:vertical;}
-  .form-status{
-    grid-column:1/-1;
-    min-height:24px;
-    padding:12px 14px;
-    border-radius:14px;
-    font-size:13px;
-    line-height:1.5;
-    white-space:pre-line;
-    background:rgba(108,117,82,.08);
-    color:var(--forest);
-    display:none;
-  }
-  .form-status.show{display:block;}
-  .form-status.success{background:rgba(108,117,82,.10);}
-  .form-status.error{background:rgba(169,133,76,.12);color:#7a4517;}
-  .hp-field{
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
   }
 
   footer{
@@ -917,74 +866,35 @@
           <h2>Tell us about your project.</h2>
           <p>Share a few details about your property and requirement, and our design team will reach out to arrange a site visit.</p>
           <div class="contact-actions">
-            <a class="btn primary contact-phone" href="tel:+918277788033" aria-label="Call Green Vista at +91 82777 88033">+91 82777 88033</a>
-            <a class="btn ghost contact-phone" href="https://wa.me/918277788033" target="_blank" rel="noopener" aria-label="Message Green Vista on WhatsApp at +91 82777 88033">WhatsApp</a>
+            <a class="btn primary contact-phone" href="tel:+91 8277788033" aria-label="Call Green Vista at +91 82777 88033">+91 82777 88033</a>
+            <a class="btn ghost contact-phone" href="https://wa.me/918277788033" target="_blank" rel="noopener" aria-label="Message Green Vista on WhatsApp at 82777 88033">WhatsApp</a>
           </div>
           <div class="info">
-            <div><strong>Phone</strong>+91 82777 88033</div>
+            <div><strong>Phone</strong>82777 88033</div>
             <div><strong>Email</strong>hello@greenvista.in</div>
             <div><strong>Studio</strong>Bidarahalli, Bengaluru</div>
           </div>
-          <p style="font-size:12px;color:#8a8174;margin-top:10px;">Owner alerts are routed privately to the team for every consultation request.</p>
+          <p style="font-size:12px;color:#8a8174;margin-top:10px;">Phone and WhatsApp now use +9182777 88033.</p>
         </div>
-        <form class="reveal consultation-form" aria-label="Consultation request form" id="consultationForm">
-          <input type="hidden" name="source" value="Green Vista Website">
-          <input type="hidden" name="pageUrl" id="pageUrlField">
-          <input type="hidden" name="utmSource" id="utmSourceField">
-          <input type="hidden" name="utmMedium" id="utmMediumField">
-          <input type="hidden" name="utmCampaign" id="utmCampaignField">
-          <input type="hidden" name="idempotencyKey" id="idempotencyKeyField">
-          <input type="hidden" name="timeZone" value="Asia/Kolkata">
-          <label class="hp-field" aria-hidden="true" tabindex="-1">Leave this field empty
-            <input type="text" name="honeypot" autocomplete="off" tabindex="-1">
-          </label>
-          <div class="field"><label for="fname">Name</label><input id="fname" name="name" type="text" autocomplete="name" required></div>
-          <div class="field"><label for="fphone">Phone</label><input id="fphone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
-          <div class="field"><label for="femail">Email</label><input id="femail" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="floc">Location</label><input id="floc" name="location" type="text" placeholder="Area in Bangalore" autocomplete="address-level2" required></div>
-          <div class="field"><label for="fservice">Service Interested In</label>
-            <select id="fservice" name="service" required>
-              <option value="">Select a service</option>
-              <option>Terrace Garden</option>
-              <option>Villa Landscaping</option>
-              <option>Vertical Garden</option>
-              <option>Commercial Landscaping</option>
-              <option>Outdoor Living</option>
-              <option>Pergola & Outdoor Structures</option>
-            </select>
-          </div>
-          <div class="field"><label for="fptype">Project Type</label>
-            <select id="fptype" name="projectType" required>
-              <option value="">Select project type</option>
+        <form class="reveal" aria-label="Consultation request form">
+          <div class="field"><label for="fname">Name</label><input id="fname" name="name" type="text" required></div>
+          <div class="field"><label for="fphone">Phone</label><input id="fphone" name="phone" type="tel" required></div>
+          <div class="field"><label for="femail">Email</label><input id="femail" name="email" type="email" required></div>
+          <div class="field"><label for="floc">Location</label><input id="floc" name="location" type="text" placeholder="Area in Bangalore"></div>
+          <div class="field"><label for="fptype">Property Type</label>
+            <select id="fptype" name="property_type">
               <option>Villa / Independent House</option>
               <option>Apartment / Terrace</option>
               <option>Commercial / Office</option>
               <option>Hospitality</option>
-              <option>Residential</option>
-              <option>Commercial</option>
               <option>Other</option>
             </select>
           </div>
-          <div class="field"><label for="fcontact">Preferred Contact</label>
-            <select id="fcontact" name="preferredContact">
-              <option>Call</option>
-              <option>WhatsApp</option>
-              <option>Email</option>
-            </select>
-          </div>
-          <div class="field"><label for="fdate">Preferred Consultation Date</label><input id="fdate" name="preferredConsultationDate" type="date"></div>
-          <div class="field"><label for="fbudget">Budget</label><input id="fbudget" name="budget" type="text" placeholder="Optional"></div>
-          <div class="field full"><label for="freq">Requirements</label><textarea id="freq" name="requirements" placeholder="Tell us what you want to build" required></textarea></div>
-          <div class="field full"><label for="fmsg">Additional Notes</label><textarea id="fmsg" name="message" placeholder="Anything else we should know?"></textarea></div>
-          <div class="field full">
-            <label for="fphotos">Property Photos</label>
-            <div class="file-field">
-              <input id="fphotos" name="propertyPhotos" type="file" multiple accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp">
-              <span class="hint">Optional. JPG, JPEG, PNG, or WEBP. Up to 5 files, 8 MB each.</span>
-            </div>
-          </div>
-          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
-          <div class="submit-row"><button id="submitConsultationBtn" type="submit" class="btn primary">Request Consultation</button></div>
+          <div class="field"><label for="farea">Approx. Area</label><input id="farea" name="area" type="text" placeholder="e.g. 1200 sq ft"></div>
+          <div class="field full"><label for="freq">Requirement</label><input id="freq" name="requirement" type="text" placeholder="e.g. Terrace garden, villa landscaping..."></div>
+          <div class="field full"><label for="fmsg">Message</label><textarea id="fmsg" name="message"></textarea></div>
+          <div class="field full"><label>Upload Property Photos</label><div class="file-field">Drag files here or click to upload (optional)</div></div>
+          <div class="submit-row"><button type="submit" class="btn primary">Request Consultation</button></div>
         </form>
       </div>
     </div>
@@ -1115,115 +1025,9 @@
   });
   setCompare(50);
 
-  const form = document.getElementById('consultationForm');
-  const formStatus = document.getElementById('formStatus');
-  const submitBtn = document.getElementById('submitConsultationBtn');
-  const hiddenFields = {
-    pageUrl: document.getElementById('pageUrlField'),
-    utmSource: document.getElementById('utmSourceField'),
-    utmMedium: document.getElementById('utmMediumField'),
-    utmCampaign: document.getElementById('utmCampaignField'),
-    idempotencyKey: document.getElementById('idempotencyKeyField'),
-  };
-  const photosInput = document.getElementById('fphotos');
-  const submitEndpoint = location.protocol === 'file:' ? 'http://localhost:3000/api/leads' : '/api/leads';
-  const PHOTO_MAX_COUNT = 5;
-  const PHOTO_MAX_SIZE_BYTES = 8 * 1024 * 1024;
-  const PHOTO_MIME_TYPES = new Set(['image/jpeg', 'image/png', 'image/webp']);
-
-  function makeIdempotencyKey() {
-    if (window.crypto?.randomUUID) {
-      return `lead-${window.crypto.randomUUID()}`;
-    }
-    return `lead-${Date.now()}-${Math.random().toString(16).slice(2)}`;
-  }
-
-  function populateTrackingFields() {
-    const url = new URL(window.location.href);
-    hiddenFields.pageUrl.value = window.location.href;
-    hiddenFields.utmSource.value = url.searchParams.get('utm_source') || '';
-    hiddenFields.utmMedium.value = url.searchParams.get('utm_medium') || '';
-    hiddenFields.utmCampaign.value = url.searchParams.get('utm_campaign') || '';
-    hiddenFields.idempotencyKey.value = makeIdempotencyKey();
-  }
-
-  function setFormStatus(type, message) {
-    if (!message) {
-      formStatus.className = 'form-status';
-      formStatus.textContent = '';
-      return;
-    }
-    formStatus.className = `form-status show ${type}`;
-    formStatus.textContent = message;
-  }
-
-  function validateSelectedPhotos() {
-    const files = Array.from(photosInput.files || []);
-    if (files.length > PHOTO_MAX_COUNT) {
-      return `You can upload up to ${PHOTO_MAX_COUNT} photos.`;
-    }
-    for (const [index, file] of files.entries()) {
-      if (!PHOTO_MIME_TYPES.has(file.type)) {
-        return `Photo ${index + 1} must be JPG, PNG, or WEBP.`;
-      }
-      if (file.size > PHOTO_MAX_SIZE_BYTES) {
-        return `Photo ${index + 1} is too large. Keep each file under 8 MB.`;
-      }
-    }
-    return '';
-  }
-
-  function resetFormAfterSuccess() {
-    form.reset();
-    populateTrackingFields();
-  }
-
-  populateTrackingFields();
-
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const photoError = validateSelectedPhotos();
-    if (photoError) {
-      setFormStatus('error', photoError);
-      return;
-    }
-
-    const data = new FormData(form);
-    const honeypot = String(data.get('honeypot') || '').trim();
-    const customerName = String(data.get('name') || 'there').trim() || 'there';
-    if (honeypot) {
-      setFormStatus('success', `Consultation Request Received\n\nThank you, ${customerName}.\n\nWe have received your project details.\nOur Green Vista team will contact you shortly.`);
-      resetFormAfterSuccess();
-      return;
-    }
-
-    submitBtn.disabled = true;
-    const originalLabel = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    setFormStatus('', '');
-
-    try {
-      const response = await fetch(submitEndpoint, {
-        method: 'POST',
-        body: data,
-      });
-
-      const result = await response.json().catch(() => ({}));
-      if (!response.ok) {
-        throw new Error(result.error || result.message || 'Submission failed. Please try again.');
-      }
-
-      const leadLabel = result.leadId ? ` Reference: ${result.leadId}.` : '';
-      const duplicateLabel = result.duplicate ? '\nWe already had this lead and updated the record.' : '';
-      setFormStatus('success', `Consultation Request Received\n\nThank you, ${customerName}.\n\nWe’ve received your project details.${leadLabel}${duplicateLabel}\nOur Green Vista team will contact you shortly.`);
-      resetFormAfterSuccess();
-    } catch (error) {
-      setFormStatus('error', error.message || 'Something went wrong. Please try again.');
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = originalLabel;
-    }
+  document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you - this form is not yet connected to a backend. Wire it to email, WhatsApp or CRM before going live.');
   });
 </script>
 </body>
